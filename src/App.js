@@ -1,12 +1,21 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import { Normalize } from 'styled-normalize';
+import GlobalCSS from './globalStyle';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/search" />
-      <Route path="/" />
-    </Routes>
+    <>
+      <BrowserRouter>
+        <Normalize />
+        <GlobalCSS />
+        <Routes>
+          <Route path="/search" />
+          <Route path="/" />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
