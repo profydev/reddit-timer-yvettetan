@@ -1,10 +1,21 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import { Normalize } from 'styled-normalize';
+import GlobalCSS from './globalStyle';
 
 function App() {
   return (
-    <div>
-      App Placeholder
-    </div>
+    <>
+      <BrowserRouter>
+        <Normalize />
+        <GlobalCSS />
+        <Routes>
+          <Route path="/search" />
+          <Route path="/" />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
