@@ -1,10 +1,12 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
-      App Placeholder
-    </div>
+    <Routes>
+      <Route path="/search" />
+      <Route path="/" />
+    </Routes>
   );
 }
 
